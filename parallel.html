@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Code Crush for programming paradigms</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+  </head>
+  <body>
+
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+    <header><i class="fab fa-gratipay"></i>Code Crush</header>
+  <ul>
+    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+    <li><a href="structural.html"><i class="fas fa-link"></i>Structural</a></li>
+    <li><a href="procedural.html"><i class="fas fa-stream"></i>Procedural</a></li>
+    <li><a href="objectoriented.html"><i class="fas fa-angle-double-right"></i>Object Oriented</a></li>
+    <li><a href="eventdriven.html"><i class="far fa-calendar-check"></i>Event Driven</a></li>
+    <li><a href="declarative.html"><i class="fas fa-sliders-h"></i>Declarative</a></li>
+    <li><a href="imperative.html"><i class="far fa-envelope"></i>Imperative</a></li>
+    <li><a href="#"><i class="fas fa-equals"></i>Parallel</a></li>
+    <li><a href="concurrent.html"><i class="fas fa-database"></i>Concurrent</a></li>
+    <li><a href="functional.html"><i class="fas fa-percent"></i>Functional</a></li>
+    <li><a href="logic.html"><i class="fas fa-sign-in-alt"></i>Logic</a></li>
+    <li><a href="dependent.html"><i class="fas fa-balance-scale-right"></i>Dependent</a></li>
+    <li><a href="network.html"><i class="fas fa-wifi"></i>Network</a></li>
+    <li><a href="symbolic.html"><i class="fas fa-mouse-pointer"></i> Symbolic</a></li>
+    <li><a href="automata.html"><i class="fas fa-anchor"></i>Automata</a></li>
+    <li><a href="gui.html"><i class="fas fa-gamepad"></i>GUI</a></li>
+
+  </ul>
+</div>
+
+       <section>
+
+         <div class="topnav">
+       <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+       <a href="about/index.html"><i class="fas fa-user-circle"></i> About</a>
+       <a href="https://forms.gle/Dw47JDVJr4tQo7j26"><i class="far fa-bell"></i> Notify</a>
+       <input type="text" placeholder="Search..">
+     </div>
+          <h1>Parallel Programming Paradigms</h1>
+              <div class="main">
+
+<p>In computing, a parallel programming model is an abstraction of parallel computer architecture, with which it is convenient to express algorithms and their composition in programs. The value of a programming model can be judged on its generality: how well a range of different problems can be expressed for a variety of different architectures, and its performance: how efficiently the compiled programs can execute.[1] The implementation of a parallel programming model can take the form of a library invoked from a sequential language, as an extension to an existing language, or as an entirely new language.</p>
+<br>
+<p>Consensus around a particular programming model is important because it leads to different parallel computers being built with support for the model, thereby facilitating portability of software. In this sense, programming models are referred to as bridging between hardware and software.</p>
+
+
+                </div>
+     <div class="main2">
+         <p><span style="color:#52D273;font-weight:bold">TERMINOLOGY</span></p><br>
+<p>Parallel programming models are closely related to models of computation. A model of parallel computation is an abstraction used to analyze the cost of computational processes, but it does not necessarily need to be practical, in that it can be implemented efficiently in hardware and/or software. A programming model, in contrast, does specifically imply the practical considerations of hardware and software implementation.</p>
+<br>
+<p>A parallel programming language may be based on one or a combination of programming models. For example, High Performance Fortran is based on shared-memory interactions and data-parallel problem decomposition, and Go provides mechanism for shared-memory and message-passing interaction.</p>
+          </div>
+             <div class="main3">
+              <p><span style="color:#E4556A;font-weight:bold">CLASSIFICATION OF PARALLEL PROGRAMMING MODELS</span></p><br>
+<p>Process interaction<br>
+Process interaction relates to the mechanisms by which parallel processes are able to communicate with each other. The most common forms of interaction are shared memory and message passing, but interaction can also be implicit (invisible to the programmer).</p>
+<br>
+<p>Shared memory<br>
+Shared memory is an efficient means of passing data between processes. In a shared-memory model, parallel processes share a global address space that they read and write to asynchronously. Asynchronous concurrent access can lead to race conditions, and mechanisms such as locks, semaphores and monitors can be used to avoid these. Conventional multi-core processors directly support shared memory, which many parallel programming languages and libraries, such as Cilk, OpenMP and Threading Building Blocks, are designed to exploit.</p>
+<br>
+<p>Mesage passing<br>
+In a message-passing model, parallel processes exchange data through passing messages to one another. These communications can be asynchronous, where a message can be sent before the receiver is ready, or synchronous, where the receiver must be ready. The Communicating sequential processes (CSP) formalisation of message passing uses synchronous communication channels to connect processes, and led to important languages such as Occam, Limbo and Go. In contrast, the actor model uses asynchronous message passing and has been employed in the design of languages such as D, Scala and SALSA.</p>
+<br>
+<p>Implicit interaction<br>
+In an implicit model, no process interaction is visible to the programmer and instead the compiler and/or runtime is responsible for performing it. Two examples of implicit parallelism are with domain-specific languages where the concurrency within high-level operations is prescribed, and with functional programming languages because the absence of side-effects allows non-dependent functions to be executed in parallel.[6] However, this kind of parallelism is difficult to manage[7] and functional languages such as Concurrent Haskell and Concurrent ML provide features to manage parallelism explicitly.</p>
+            <br>
+            </div>
+            <div class="video">
+
+               <iframe width="400" height="300" src="https://www.youtube.com/embed/36nCgG40DJo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               <img src="images/parallel.jpg" alt="paradigm" title="paradigm" width="70%">
+
+             </div>
+      </section>
+  </body>
+</html>

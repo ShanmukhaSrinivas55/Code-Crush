@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Code Crush for programming paradigms</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+  </head>
+  <body>
+
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+    <header><i class="fab fa-gratipay"></i>Code Crush</header>
+  <ul>
+    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+    <li><a href="structural.html"><i class="fas fa-link"></i>Structural</a></li>
+    <li><a href="procedural.html"><i class="fas fa-stream"></i>Procedural</a></li>
+    <li><a href="objectoriented.html"><i class="fas fa-angle-double-right"></i>Object Oriented</a></li>
+    <li><a href="#"><i class="far fa-calendar-check"></i>Event Driven</a></li>
+    <li><a href="declarative.html"><i class="fas fa-sliders-h"></i>Declarative</a></li>
+    <li><a href="imperative.html"><i class="far fa-envelope"></i>Imperative</a></li>
+    <li><a href="parallel.html"><i class="fas fa-equals"></i>Parallel</a></li>
+    <li><a href="#"><i class="fas fa-database"></i>Concurrent</a></li>
+    <li><a href="functional.html"><i class="fas fa-percent"></i>Functional</a></li>
+    <li><a href="logic.html"><i class="fas fa-sign-in-alt"></i>Logic</a></li>
+    <li><a href="dependent.html"><i class="fas fa-balance-scale-right"></i>Dependent</a></li>
+    <li><a href="network.html"><i class="fas fa-wifi"></i>Network</a></li>
+    <li><a href="symbolic.html"><i class="fas fa-mouse-pointer"></i> Symbolic</a></li>
+    <li><a href="automata.html"><i class="fas fa-anchor"></i>Automata</a></li>
+    <li><a href="gui.html"><i class="fas fa-gamepad"></i>GUI</a></li>
+
+  </ul>
+</div>
+
+       <section>
+
+         <div class="topnav">
+       <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+       <a href="about/index.html"><i class="fas fa-user-circle"></i> About</a>
+       <a href="https://forms.gle/Dw47JDVJr4tQo7j26"><i class="far fa-bell"></i> Notify</a>
+       <input type="text" placeholder="Search..">
+     </div>
+          <h1>Concurrent Programming Paradigms</h1>
+              <div class="main">
+              <p>  Concurrent computing is a form of computing in which several computations are executed concurrently—during overlapping time periods—instead of sequentially, with one completing before the next starts.</p>
+<br>
+<p>This is a property of a system—whether a program, computer, or a network—where there is a separate execution point or "thread of control" for each process. A concurrent system is one where a computation can advance without waiting for all other computations to complete.</p>
+<br>
+<p>Concurrent computing is a form of modular programming. In its paradigm an overall computation is factored into subcomputations that may be executed concurrently. Pioneers in the field of concurrent computing include Edsger Dijkstra, Per Brinch Hansen, and C.A.R. Hoare.</p>
+</div>
+
+     <div class="main2">
+         <p><span style="color:#52D273;font-weight:bold">COORDINATING ACCESS TO SHARED RESOURCES</span></p><br>
+<p>The main challenge in designing concurrent programs is concurrency control: ensuring the correct sequencing of the interactions or communications between different computational executions, and coordinating access to resources that are shared among executions.[5] Potential problems include race conditions, deadlocks, and resource starvation. For example, consider the following algorithm to make withdrawals from a checking account represented by the shared resource balance:</p>
+<br>
+<p>1. bool withdraw(int withdrawal)<br>
+2. {<br>
+3. if (balance >= withdrawal)<br>
+4. {<br>
+5. balance -= withdrawal;<br>
+6. return true;<br>
+7. }<br>
+return false;<br>
+}</p>
+<br>
+<p>Suppose balance = 500, and two concurrent threads make the calls withdraw(300) and withdraw(350). If line 3 in both operations executes before line 5 both operations will find that balance >= withdrawal evaluates to true, and execution will proceed to subtracting the withdrawal amount. However, since both processes perform their withdrawals, the total amount withdrawn will end up being more than the original balance. These sorts of problems with shared resources benefit from the use of concurrency control, or non-blocking algorithms.</p>
+</div>
+             <div class="main3">
+            <p><span style="color:#E95065;font-weight:bold">INTRODUCTION</span></p><br>
+<p>The concept of concurrent computing is frequently confused with the related but distinct concept of parallel computing,[2][3] although both can be described as "multiple processes executing during the same period of time". In parallel computing, execution occurs at the same physical instant: for example, on separate processors of a multi-processor machine, with the goal of speeding up computations—parallel computing is impossible on a (one-core) single processor, as only one computation can occur at any instant (during any single clock cycle).[a] By contrast, concurrent computing consists of process lifetimes overlapping, but execution need not happen at the same instant. The goal here is to model processes in the outside world that happen concurrently, such as multiple clients accessing a server at the same time. Structuring software systems as composed of multiple concurrent, communicating parts can be useful for tackling complexity, regardless of whether the parts can be executed in parallel.</p>
+<br>
+<p>For example, concurrent processes can be executed on one core by interleaving the execution steps of each process via time-sharing slices: only one process runs at a time, and if it does not complete during its time slice, it is paused, another process begins or resumes, and then later the original process is resumed. In this way, multiple processes are part-way through execution at a single instant, but only one process is being executed at that instant.</p>
+<br>
+<p>Concurrent computations may be executed in parallel,[2][5] for example, by assigning each process to a separate processor or processor core, or distributing a computation across a network. In general, however, the languages, tools, and techniques for parallel programming might not be suitable for concurrent programming, and vice versa.</p>
+
+</div>
+               <div class="main4">
+                 <p><span style="color:#46BDDF;font-weight:bold">ADVANTAGES OF CONCURRENT PROGRAMMING</span></p><br>
+<p>The advantages of concurrent computing include:</p>
+<br>
+<p>Increased program throughput—parallel execution of a concurrent program allows the number of tasks completed in a given time to increase proportionally to the number of processors according to Gustafson's law<br>
+High responsiveness for input/output—input/output-intensive programs mostly wait for input or output operations to complete. Concurrent programming allows the time that would be spent waiting to be used for another task.<br>
+More appropriate program structure—some problems and problem domains are well-suited to representation as concurrent tasks or processes.</p>
+              <br>
+              </div>
+              <div class="video">
+
+               <iframe width="400" height="300" src="https://www.youtube.com/embed/IEEhzQoKtQU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               <img src="images/concurrent.jpg" alt="paradigm" title="paradigm" width="70%">
+
+             </div>
+      </section>
+  </body>
+</html>

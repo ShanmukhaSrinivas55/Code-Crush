@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Code Crush for programming paradigms</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+  </head>
+  <body>
+
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+    <header><i class="fab fa-gratipay"></i>Code Crush</header>
+  <ul>
+    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+    <li><a href="structural.html"><i class="fas fa-link"></i>Structural</a></li>
+    <li><a href="procedural.html"><i class="fas fa-stream"></i>Procedural</a></li>
+    <li><a href="objectoriented.html"><i class="fas fa-angle-double-right"></i>Object Oriented</a></li>
+    <li><a href="#"><i class="far fa-calendar-check"></i>Event Driven</a></li>
+    <li><a href="declarative.html"><i class="fas fa-sliders-h"></i>Declarative</a></li>
+    <li><a href="imperative.html"><i class="far fa-envelope"></i>Imperative</a></li>
+    <li><a href="parallel.html"><i class="fas fa-equals"></i>Parallel</a></li>
+    <li><a href="concurrent.html"><i class="fas fa-database"></i>Concurrent</a></li>
+    <li><a href="functional.html"><i class="fas fa-percent"></i>Functional</a></li>
+    <li><a href="logic.html"><i class="fas fa-sign-in-alt"></i>Logic</a></li>
+    <li><a href="dependent.html"><i class="fas fa-balance-scale-right"></i>Dependent</a></li>
+    <li><a href="network.html"><i class="fas fa-wifi"></i>Network</a></li>
+    <li><a href="symbolic.html"><i class="fas fa-mouse-pointer"></i> Symbolic</a></li>
+    <li><a href="automata.html"><i class="fas fa-anchor"></i>Automata</a></li>
+    <li><a href="gui.html"><i class="fas fa-gamepad"></i>GUI</a></li>
+
+  </ul>
+</div>
+
+       <section>
+
+         <div class="topnav">
+       <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+       <a href="about/index.html"><i class="fas fa-user-circle"></i> About</a>
+       <a href="https://forms.gle/Dw47JDVJr4tQo7j26"><i class="far fa-bell"></i> Notify</a>
+       <input type="text" placeholder="Search..">
+     </div>
+          <h1>Event Driven Programming Paradigms</h1>
+              <div class="main">
+<p>In computer programming, event-driven programming is a programming paradigm in which the flow of the program is determined by events such as user actions (mouse clicks, key presses), sensor outputs, or messages from other programs or threads. Event-driven programming is the dominant paradigm used in graphical user interfaces and other applications (e.g., JavaScript web applications) that are centered on performing certain actions in response to user input. This is also true of programming for device drivers (e.g., P in USB device driver stacks[1]).</p><br>
+<p>In an event-driven application, there is generally a main loop that listens for events, and then triggers a callback function when one of those events is detected. In embedded systems, the same may be achieved using hardware interrupts instead of a constantly running main loop. Event-driven programs can be written in any programming language, although the task is easier in languages that provide high-level abstractions, such as await and closures.</p>
+                </div>
+     <div class="main2">
+         <p><span style="color:#52D273;font-weight:bold">CREATING EVENT HANDLERS</span></p><br>
+         <p>The first step in developing an event-driven program is to write a series of subroutines, or methods, called event-handler routines. These routines handle the events to which the main program will respond. For example, a single left-button mouse-click on a command button in a GUI program may trigger a routine that will open another window, save data to a database or exit the application. Many modern-day programming environments provide the programmer with event templates, allowing the programmer to focus on writing the event code.</p><br>
+          <p>The second step is to bind event handlers to events so that the correct function is called when the event takes place. Graphical editors combine the first two steps: double-click on a button, and the editor creates an (empty) event handler associated with the user clicking the button and opens a text window so you can edit the event handler.</p><br>
+            <p>The third step in developing an event-driven program is to write the main loop. This is a function that checks for the occurrence of events, and then calls the matching event handler to process it. Most event-driven programming environments already provide this main loop, so it need not be specifically provided by the application programmer. RPG, an early programming language from IBM, whose 1960s design concept was similar to event-driven programming discussed above, provided a built-in main I/O loop (known as the "program cycle") where the calculations responded in accordance to 'indicators' (flags) that were set earlier in the cycle.</p>
+             </div>
+             <div class="main3">
+            <p><span style="color:#E95065;font-weight:bold">EXCEPTION HANDLERS IN PL/I</span></p><br>
+<p>In PL/I, even though a program itself may not be predominantly event-driven, certain abnormal events such as a hardware error, overflow or "program checks" may occur that possibly prevent further processing. Exception handlers may be provided by "ON statements" in (unseen) callers to provide cleaning routines to clean up afterwards before termination, or to perform recovery operations and return to the interrupted procedure.</p>
+              </div>
+               <div class="main4">
+                 <p><span style="color:#46BDDF;font-weight:bold">EVENT HANDLERS</span></p><br>
+                        <p>A trivial event handler</p><br>
+
+                        <p>Because the code is for checking for events and the main loop are common amongst applications, many programming frameworks take care of their implementation and expect the user to provide only the code for the event handlers. In this simple example, there may be a call to an event handler called OnKeyEnter() that includes an argument with a string of characters, corresponding to what the user typed before hitting the ENTER key. To add two numbers, storage outside the event handler must be used. The implementation might look like below.</p><br>
+
+                        <p>1. globally declare the counter K and the integer T.<br>
+                        2. OnKeyEnter(character C)<br>
+                        3. {<br>
+                        4. convert C to a number N<br>
+                        5. if K is zero store N in T and increment K<br>
+                        6. otherwise, add N to T, print the result and reset K to zero<br>
+                        7. }</p><br>
+                        <p>While keeping track of history is normally trivial in a sequential program because event handlers execute in response to external events, correctly structuring the handlers to work correctly when called in any order can require special attention and planning in an event-driven program.</p>
+                          <br>
+                  </div>
+                  <div class="video">
+
+                    <iframe width="400" height="300" src="https://www.youtube.com/embed/trqSqTu8YgQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <img src="images/driven.png" alt="paradigm" title="paradigm" width="70%">
+
+                </div>
+      </section>
+  </body>
+</html>

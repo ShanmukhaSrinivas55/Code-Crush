@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Code Crush for programming paradigms</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+  </head>
+  <body>
+
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+    <header><i class="fab fa-gratipay"></i>Code Crush</header>
+  <ul>
+    <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+    <li><a href="structural.html"><i class="fas fa-link"></i>Structural</a></li>
+    <li><a href="procedural.html"><i class="fas fa-stream"></i>Procedural</a></li>
+    <li><a href="objectoriented.html"><i class="fas fa-angle-double-right"></i>Object Oriented</a></li>
+    <li><a href="eventdriven.html"><i class="far fa-calendar-check"></i>Event Driven</a></li>
+    <li><a href="declarative.html"><i class="fas fa-sliders-h"></i>Declarative</a></li>
+    <li><a href="imperative.html"><i class="far fa-envelope"></i>Imperative</a></li>
+    <li><a href="parallel"><i class="fas fa-equals"></i>Parallel</a></li>
+    <li><a href="concurrent.html"><i class="fas fa-database"></i>Concurrent</a></li>
+    <li><a href="functional.html"><i class="fas fa-percent"></i>Functional</a></li>
+    <li><a href="#"><i class="fas fa-sign-in-alt"></i>Logic</a></li>
+    <li><a href="dependent.html"><i class="fas fa-balance-scale-right"></i>Dependent</a></li>
+    <li><a href="network.html"><i class="fas fa-wifi"></i>Network</a></li>
+    <li><a href="symbolic.html"><i class="fas fa-mouse-pointer"></i> Symbolic</a></li>
+    <li><a href="automata.html"><i class="fas fa-anchor"></i>Automata</a></li>
+    <li><a href="gui.html"><i class="fas fa-gamepad"></i>GUI</a></li>
+
+  </ul>
+</div>
+
+       <section>
+
+         <div class="topnav">
+       <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+       <a href="about/index.html"><i class="fas fa-user-circle"></i> About</a>
+       <a href="https://forms.gle/Dw47JDVJr4tQo7j26"><i class="far fa-bell"></i> Notify</a>
+       <input type="text" placeholder="Search..">
+     </div>
+          <h1>Logic Programming Paradigms</h1>
+              <div class="main">
+                <p>Logic programming is a programming paradigm which is largely based on formal logic. Any program written in a logic programming language is a set of sentences in logical form, expressing facts and rules about some problem domain. Major logic programming language families include Prolog, answer set programming (ASP) and Datalog. In all of these languages, rules are written in the form of clauses:</p>
+<br>
+<p>H :- B1, …, Bn.</p>
+<br>
+<p>and are read declaratively as logical implications:</p>
+<br>
+<p>H if B1 and … and Bn.</p>
+<br>
+<p>H is called the head of the rule and B1, ..., Bn is called the body. Facts are rules that have no body, and are written in the simplified form:</p>
+<br>
+<p>H.</p>
+<br>
+<p>In the simplest case in which H, B1, ..., Bn are all atomic formulae, these clauses are called definite clauses or Horn clauses. However, there are many extensions of this simple case, the most important one being the case in which conditions in the body of a clause can also be negations of atomic formulas. Logic programming languages that include this extension have the knowledge representation capabilities of a non-monotonic logic.</p>
+<br>
+<p>In ASP and Datalog, logic programs have only a declarative reading, and their execution is performed by means of a proof procedure or model generator whose behaviour is not meant to be controlled by the programmer. However, in the Prolog family of languages, logic programs also have a procedural interpretation as goal-reduction procedures:</p>
+<br>
+<p>to solve H, solve B1, and ... and solve Bn.</p>
+<br>
+<p>Consider the following clause as an example:</p>
+<br>
+<p>fallible(X) :- human(X).</p>
+<br>
+<p>based on an example used by Terry Winograd[1] to illustrate the programming language Planner. As a clause in a logic program, it can be used both as a procedure to test whether X is fallible by testing whether X is human, and as a procedure to find an X which is fallible by finding an X which is human. Even facts have a procedural interpretation. For example, the clause:</p>
+<br>
+<p>human(socrates).</p>
+<br>
+<p>can be used both as a procedure to show that socrates is human, and as a procedure to find an X that is human by "assigning" socrates to X.</p>
+<br>
+<p>The declarative reading of logic programs can be used by a programmer to verify their correctness. Moreover, logic-based program transformation techniques can also be used to transform logic programs into logically equivalent programs that are more efficient. In the Prolog family of logic programming languages, the programmer can also use the known problem-solving behaviour of the execution mechanism to improve the efficiency of programs.</p>
+</div>
+
+     <div class="main2">
+         <p><span style="color:#52D273;font-weight:bold">CONCEPTS</span></p><br>
+<p><strong>Logic and control</strong><br>
+Logic programming can be viewed as controlled deduction. An important concept in logic programming is the separation of programs into their logic component and their control component. With pure logic programming languages, the logic component alone determines the solutions produced. The control component can be varied to provide alternative ways of executing a logic program. This notion is captured by the slogan</p>
+<br>
+<p>Algorithm = Logic + Control where "Logic" represents a logic program and "Control" represents different theorem-proving strategies.[10]</p>
+<br>
+<p><strong>Problem solving</strong><br>
+In the simplified, propositional case in which a logic program and a top-level atomic goal contain no variables, backward reasoning determines an and-or tree, which constitutes the search space for solving the goal. The top-level goal is the root of the tree. Given any node in the tree and any clause whose head matches the node, there exists a set of child nodes corresponding to the sub-goals in the body of the clause. These child nodes are grouped together by an "and". The alternative sets of children corresponding to alternative ways of solving the node are grouped together by an "or".</p>
+<br>
+<p>Any search strategy can be used to search this space. Prolog uses a sequential, last-in-first-out, backtracking strategy, in which only one alternative and one sub-goal is considered at a time. Other search strategies, such as parallel search, intelligent backtracking, or best-first search to find an optimal solution, are also possible.</p>
+<br>
+<p>In the more general case, where sub-goals share variables, other strategies can be used, such as choosing the subgoal that is most highly instantiated or that is sufficiently instantiated so that only one procedure applies. Such strategies are used, for example, in concurrent logic programming.</p>
+                </div>
+             <div class="main3">
+              <p><span style="color:#E4556A;font-weight:bold">IN SHORT</span></p><br>
+<p>Logic programming is a computer programming paradigm in which program statements express facts and rules about problems within a system of formal logic. Rules are written as logical clauses with a head and a body; for instance, "H is true if B1, B2, and B3 are true." Facts are expressed similar to rules, but without a body; for instance, "H is true."</p>
+<br>
+<p>Some logic programming languages, such as Datalog and ASP (Answer Set Programming), are purely declarative. They allow for statements about what the program should accomplish, with no explicit step-by-step instructions on how to do so. Others, such as Prolog, are a combination of declarative and imperative. They may also include procedural statements, such as "To solve H, solve B1, B2, and B3."</p>
+                          <br>
+                </div>
+                <div class="video">
+
+               <iframe width="400" height="315" src="https://www.youtube.com/embed/odgpKmVD-pQ?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               <img src="images/logic.png" alt="paradigm" title="paradigm" width="70%">
+
+             </div>
+      </section>
+  </body>
+</html>
